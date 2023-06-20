@@ -5,18 +5,12 @@ from .serializers import UserSerializer
 from django.shortcuts import get_object_or_404
 from .permissions import IsAccountOwner
 from rest_framework import generics
+from rest_framework.generics import CreateAPIView
+from rest_framework.response import Response
+from rest_framework import status
 
-class UserView(APIView):
-    def post(self, request: Request) -> Response:
-        """
-        Registro de usuários
-        """
-        serializer = UserSerializer(data=request.data)
-        serializer.is_valid(raise_exception=True)
-
-        serializer.save()
-
-        return Response(serializer.data, status.HTTP_201_CREATED)
+class UserView(CreateAPIView):
+    serializer_class = UserSerializer
 
 
 class UserDetailView(APIView):
