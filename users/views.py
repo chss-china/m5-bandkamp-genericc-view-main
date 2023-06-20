@@ -4,7 +4,7 @@ from rest_framework_simplejwt.authentication import JWTAuthentication
 from .serializers import UserSerializer
 from django.shortcuts import get_object_or_404
 from .permissions import IsAccountOwner
-
+from rest_framework import generics
 
 class UserView(APIView):
     def post(self, request: Request) -> Response:
