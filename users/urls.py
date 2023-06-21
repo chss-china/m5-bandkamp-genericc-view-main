@@ -1,7 +1,6 @@
 from django.urls import path
 from . import views
 from rest_framework_simplejwt import views as jwt_views
-from rest_framework_swagger.views import get_swagger_view
 from drf_spectacular.views import (
     SpectacularAPIView,
     SpectacularSwaggerView,
@@ -9,7 +8,6 @@ from drf_spectacular.views import (
 
 )
 
-    # Acessa o download do schema
    
 urlpatterns = [
     path('api/schema/', SpectacularAPIView.as_view(), name='schema'),

@@ -1,19 +1,11 @@
-from rest_framework.views import APIView, Request, Response, status
+
 from .models import User
 from rest_framework_simplejwt.authentication import JWTAuthentication
 from .serializers import UserSerializer
-from django.shortcuts import get_object_or_404
 from .permissions import IsAccountOwner
-from rest_framework import generics
 from rest_framework.generics import CreateAPIView
-from rest_framework.response import Response
-from rest_framework import status
-from rest_framework.generics import GenericAPIView
-from rest_framework.mixins import RetrieveModelMixin
-from rest_framework.response import Response
-from rest_framework.generics import get_object_or_404
 from rest_framework.generics import RetrieveUpdateDestroyAPIView
-from rest_framework import status
+
 
 class UserView(CreateAPIView):
     serializer_class = UserSerializer
