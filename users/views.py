@@ -8,6 +8,7 @@ from rest_framework.generics import RetrieveUpdateDestroyAPIView
 
 
 class UserView(CreateAPIView):
+    queryset = User.objects.all()
     serializer_class = UserSerializer
 class UserDetailView(RetrieveUpdateDestroyAPIView):
     authentication_classes = [JWTAuthentication]

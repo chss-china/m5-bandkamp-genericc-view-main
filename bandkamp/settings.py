@@ -51,6 +51,7 @@ DJANGO_APPS = [
 
 THIRD_PARTY_APPS = [
     "rest_framework",
+     "drf_spectacular"
 ]
 
 MY_APPS = [
@@ -58,7 +59,7 @@ MY_APPS = [
     "albums",
     "songs",
     "rest_framework_swagger",
-    "drf_spectacular"
+   
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + MY_APPS
@@ -122,7 +123,7 @@ if DATABASE_URL:
     DEBUG = False
 #if os.getenv("DATABASE_URL"):
  #  DATABASES['default'] = dj_database_url.config()
- #  DEBUG = False
+  # DEBUG = False
 
 #STATICFILES_DIRS = os.path.join(BASE_DIR),
 #STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
