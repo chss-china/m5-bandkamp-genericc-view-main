@@ -1,5 +1,5 @@
 # M5 - BandKamp Generic View
-
+#deploy https://django-bandkamp.onrender.com/api/users/
 ## Instalação dos pacotes de teste
 
 - Verifique se os pacotes `pytest` e/ou `pytest-testdox` estão instalados globalmente em seu sistema:
