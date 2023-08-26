@@ -14,11 +14,9 @@ from pathlib import Path
 from datetime import timedelta
 import os
 import dotenv
-from pathlib import Path
 import os
 import dotenv
 from django.core.management.utils import get_random_secret_key
-import json
 import dj_database_url
 dotenv.load_dotenv()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -58,7 +56,7 @@ MY_APPS = [
     "users",
     "albums",
     "songs",
-    "rest_framework_swagger",
+    
    
 ]
 
@@ -66,13 +64,13 @@ INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + MY_APPS
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
-    "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
 
 ]
 
